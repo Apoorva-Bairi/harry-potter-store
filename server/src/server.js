@@ -10,8 +10,6 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://harry-potter-store.vercel.app",
-  "https://harry-potter-store-78u1ytyt4-apoorvaprojects.vercel.app",
   process.env.CLIENT_URL,
 ];
 
@@ -24,7 +22,7 @@ app.use(
         return callback(null, true);
       }
 
-      return callback(new Error("Not allowed by CORS"));
+      callback(new Error("Not allowed by CORS"));
     },
     credentials: true,
   })
