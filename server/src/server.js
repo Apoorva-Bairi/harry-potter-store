@@ -10,20 +10,21 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
+  "https://harry-potter-store.vercel.app",
+  "https://harry-potter-store-78u1ytyt4-apoorvaprojects.vercel.app",
   process.env.CLIENT_URL,
 ];
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (Postman, curl, etc.)
+    origin(origin, callback) {
       if (!origin) return callback(null, true);
 
       if (allowedOrigins.includes(origin)) {
         return callback(null, true);
       }
 
-      callback(new Error("Not allowed by CORS"));
+      return callback(new Error("Not allowed by CORS"));
     },
     credentials: true,
   })
