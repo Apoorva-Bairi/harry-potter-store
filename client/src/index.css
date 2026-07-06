@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(147, 51, 234, 0.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(234, 179, 8, 0.18), transparent 35%),
+    #020617;
+  color: white;
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  backdrop-filter: blur(14px);
+}
+
+.gold-btn {
+  background: linear-gradient(135deg, #facc15, #d97706);
+  color: #111827;
+  font-weight: 700;
+}
+
+.gold-btn:hover {
+  filter: brightness(1.1);
+}
