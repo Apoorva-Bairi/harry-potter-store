@@ -93,7 +93,7 @@ export default function AdminDashboard() {
               {lowStockProducts.length}
             </h2>
           </div>
-        </div> )} ///////
+        </div> )} 
 
         {!loading && (
   <div className="mb-10 grid gap-4 md:grid-cols-3">

@@ -17,7 +17,7 @@ export default function ProtectedRoute({
 
   // Not logged in
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   // Admin-only routes
