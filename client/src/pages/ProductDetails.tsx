@@ -134,7 +134,7 @@ export default function ProductDetails() {
     }
 
     try {
-      await API.post(`/products/${id}/review`, {
+      await API.post(`/products/${id}/reviews`, {
         rating,
         comment,
       });
